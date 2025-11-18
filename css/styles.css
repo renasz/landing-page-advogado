@@ -496,200 +496,11 @@ a:hover {
 }
 
 /* ===================================
-   RESPONSIVIDADE DO HEADER E HOME
-   =================================== */
-@media (max-width: 991px) {
-    .navbar-toggle {
-        display: flex;
-    }
-    
-    .navbar-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 300px;
-        height: 100vh;
-        background-color: rgba(26, 26, 26, 0.98);
-        flex-direction: column;
-        gap: 0;
-        padding: 100px 30px 30px;
-        transition: right 0.4s ease;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
-    }
-    
-    .navbar-menu.active {
-        right: 0;
-    }
-    
-    .navbar-menu li {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .navbar-menu a {
-        display: block;
-        padding: 15px 0;
-        font-size: 18px;
-    }
-    
-    .navbar-menu a::after {
-        display: none;
-    }
-
-    /* Home Responsiva */
-    .home-content-wrapper {
-        position: absolute;
-        bottom: 0;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: center;
-        padding: 0 30px 0 30px;
-        gap: 40px;
-    }
-    
-    .home-image {
-        max-width: 320px;
-        width: 33%;
-        order: 1;
-        margin-left: 0;
-    }
-    
-    .home-image img {
-        max-height: 75vh;
-    }
-    
-    .home-content {
-        order: 2;
-        align-items: flex-start;
-        text-align: left;
-        max-width: 58%;
-        padding: 40px 0 90px 0;
-    }
-    
-    .home-title {
-        font-size: 26px;
-        text-align: left;
-        margin-bottom: 25px;
-    }
-}
-
-@media (max-width: 767px) {
-    .navbar-logo img {
-        height: 100px;
-        width: 100px;
-    }
-    
-    #header.scrolled .navbar-logo img {
-        height: 55px;
-        width: 55px;
-    }
-    
-    .home-section {
-        min-height: 500px;
-    }
-    
-    .home-content-wrapper {
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding: 0 20px 0 20px;
-        gap: 20px;
-    }
-    
-    .home-image {
-        max-width: 250px;
-        width: 40%;
-        order: 1;
-        align-self: flex-end;
-        margin-left: 0;
-    }
-    
-    .home-image img {
-        max-height: 65vh;
-    }
-    
-    .home-content {
-        order: 2;
-        align-items: flex-start;
-        text-align: left;
-        max-width: 56%;
-        padding: 30px 0 50px 0;
-    }
-    
-    .home-title {
-        font-size: 20px;
-        text-align: left;
-        line-height: 1.3;
-    }
-    
-    .btn-cta {
-        padding: 13px 28px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 575px) {
-    .navbar-menu {
-        width: 250px;
-        padding: 80px 20px 20px;
-    }
-    
-    .navbar-logo img {
-        height: 80px;
-        width: 80px;
-    }
-    
-    #header.scrolled .navbar-logo img {
-        height: 50px;
-        width: 50px;
-    }
-    
-    .home-section {
-        min-height: 450px;
-    }
-    
-    .home-content-wrapper {
-        gap: 12px;
-        padding: 0 15px 0 15px;
-    }
-    
-    .home-image {
-        max-width: 190px;
-        width: 38%;
-    }
-    
-    .home-image img {
-        max-height: 58vh;
-    }
-    
-    .home-content {
-        max-width: 58%;
-        padding: 20px 0 35px 0;
-    }
-    
-    .home-title {
-        font-size: 17px;
-        margin-bottom: 18px;
-        line-height: 1.4;
-    }
-    
-    .btn-cta {
-        padding: 11px 20px;
-        font-size: 12px;
-    }
-    
-    .btn-cta i {
-        font-size: 13px;
-        margin-right: 5px;
-    }
-}
-
-/* ===================================
    LINHA DIVISÓRIA DOURADA
    =================================== */
 .divider-line {
     width: 100%;
-    height: 5px;
+    height: 3px;
     background: linear-gradient(
         90deg,
         transparent 0%,
@@ -705,6 +516,1487 @@ a:hover {
         0 0 8px rgba(184, 134, 11, 0.3);
     position: relative;
     z-index: 10;
+}
+
+/* ===================================
+   RESPONSIVIDADE COMPLETA - HEADER E HOME
+   =================================== */
+
+/* Extra Large Desktops (1920px+) */
+@media (min-width: 1920px) {
+    /* Home */
+    .home-content-wrapper {
+        max-width: 1800px;
+        gap: 80px;
+        padding: 0 60px 0 60px;
+    }
+    
+    /* Imagem maior */
+    .home-image {
+        max-width: 550px;
+        width: 35%;
+    }
+    
+    .home-image img {
+        max-height: 95vh;
+    }
+    
+    /* Conteúdo */
+    .home-content {
+        max-width: 700px;
+        padding: 60px 0 140px 0;
+    }
+    
+    /* Título maior */
+    .home-title {
+        font-size: 52px;
+        line-height: 1.3;
+        margin-bottom: 50px;
+    }
+    
+    /* Botão maior */
+    .btn-cta {
+        padding: 22px 55px;
+        font-size: 20px;
+        letter-spacing: 1.2px;
+    }
+    
+    .btn-cta i {
+        font-size: 24px;
+        margin-right: 12px;
+    }
+    
+    /* Fumaça */
+    .home-section::after {
+        height: 220px;
+    }
+}
+
+/* Large Desktops (1600px - 1919px) */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    /* Home */
+    .home-content-wrapper {
+        max-width: 1500px;
+        gap: 70px;
+        padding: 0 50px 0 50px;
+    }
+    
+    /* Imagem maior */
+    .home-image {
+        max-width: 500px;
+        width: 34%;
+    }
+    
+    .home-image img {
+        max-height: 92vh;
+    }
+    
+    /* Conteúdo */
+    .home-content {
+        max-width: 650px;
+        padding: 50px 0 130px 0;
+    }
+    
+    /* Título maior */
+    .home-title {
+        font-size: 48px;
+        line-height: 1.3;
+        margin-bottom: 45px;
+    }
+    
+    /* Botão maior */
+    .btn-cta {
+        padding: 20px 52px;
+        font-size: 19px;
+        letter-spacing: 1.1px;
+    }
+    
+    .btn-cta i {
+        font-size: 22px;
+        margin-right: 11px;
+    }
+    
+    /* Fumaça */
+    .home-section::after {
+        height: 210px;
+    }
+}
+
+/* Large Desktops (1440px - 1599px) */
+@media (min-width: 1440px) and (max-width: 1599px) {
+    /* Home */
+    .home-content-wrapper {
+        max-width: 1350px;
+        gap: 65px;
+        padding: 0 45px 0 45px;
+    }
+    
+    /* Imagem maior */
+    .home-image {
+        max-width: 470px;
+        width: 33%;
+    }
+    
+    .home-image img {
+        max-height: 90vh;
+    }
+    
+    /* Conteúdo */
+    .home-content {
+        max-width: 620px;
+        padding: 45px 0 125px 0;
+    }
+    
+    /* Título maior */
+    .home-title {
+        font-size: 46px;
+        line-height: 1.3;
+        margin-bottom: 42px;
+    }
+    
+    /* Botão maior */
+    .btn-cta {
+        padding: 19px 50px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    .btn-cta i {
+        font-size: 21px;
+        margin-right: 11px;
+    }
+    
+    /* Fumaça */
+    .home-section::after {
+        height: 205px;
+    }
+}
+
+/* Medium-Large Desktops (1330px - 1439px) */
+@media (min-width: 1330px) and (max-width: 1439px) {
+    /* Home */
+    .home-content-wrapper {
+        max-width: 1280px;
+        gap: 65px;
+        padding: 0 42px 0 42px;
+    }
+    
+    /* Imagem MAIOR */
+    .home-image {
+        max-width: 500px;
+        width: 35%;
+    }
+    
+    .home-image img {
+        max-height: 92vh;
+    }
+    
+    /* Conteúdo */
+    .home-content {
+        max-width: 630px;
+        padding: 50px 0 130px 0;
+    }
+    
+    /* Título MAIOR */
+    .home-title {
+        font-size: 48px;
+        line-height: 1.3;
+        margin-bottom: 45px;
+    }
+    
+    /* Botão MAIOR */
+    .btn-cta {
+        padding: 20px 52px;
+        font-size: 19px;
+        letter-spacing: 1.1px;
+    }
+    
+    .btn-cta i {
+        font-size: 22px;
+        margin-right: 11px;
+    }
+    
+    /* Fumaça */
+    .home-section::after {
+        height: 208px;
+    }
+}
+
+/* Standard Desktops (1200px - 1439px) */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    /* Home */
+    .home-content-wrapper {
+        max-width: 1150px;
+        gap: 55px;
+        padding: 0 35px 0 35px;
+    }
+    
+    /* Imagem maior */
+    .home-image {
+        max-width: 430px;
+        width: 33%;
+    }
+    
+    .home-image img {
+        max-height: 88vh;
+    }
+    
+    /* Conteúdo */
+    .home-content {
+        max-width: 580px;
+        padding: 40px 0 115px 0;
+    }
+    
+    /* Título maior */
+    .home-title {
+        font-size: 44px;
+        line-height: 1.3;
+        margin-bottom: 40px;
+    }
+    
+    /* Botão maior */
+    .btn-cta {
+        padding: 19px 48px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    .btn-cta i {
+        font-size: 21px;
+        margin-right: 10px;
+    }
+    
+    /* Fumaça */
+    .home-section::after {
+        height: 205px;
+    }
+}
+
+/* Tablets Landscape & Small Desktops (992px - 1199px) */
+@media (max-width: 991px) {
+    /* Header Mobile */
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        padding: 100px 30px 30px;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        z-index: 1002;
+    }
+    
+    .navbar-menu.active {
+        right: 0;
+    }
+    
+    .navbar-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    
+    .navbar-menu a {
+        display: block;
+        padding: 18px 0;
+        font-size: 16px;
+    }
+    
+    .navbar-menu a::after {
+        display: none;
+    }
+    
+    .navbar-menu a:hover {
+        padding-left: 10px;
+    }
+
+    /* Home */
+    .home-section {
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .home-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 0 0 0;
+        gap: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    /* 1. Foto - MAIOR E MAIS ALTA */
+    .home-image {
+        max-width: 650px;
+        width: 85%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-40px);
+    }
+    
+    .home-image img {
+        width: 100%;
+    }
+    
+    .home-image::after {
+        display: none;
+    }
+    
+    /* 2. Container do conteúdo - TOTALMENTE CENTRALIZADO */
+    .home-content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 100px 0 100px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        z-index: 10;
+        min-height: 60vh;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        gap: 25px;
+    }
+    
+    /* Background da fumaça em 100% via ::before */
+    .home-content::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        height: 50%;
+        z-index: -1;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título - PERFEITAMENTE CENTRALIZADO */
+    .home-title {
+        font-size: 30px;
+        margin: 0;
+        order: 2;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+/* 4. Botão - PERFEITAMENTE CENTRALIZADO E MAIOR */
+    .home-cta {
+        background-color: #B8860B;
+        order: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .btn-cta {
+        padding: 16px 50px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Remove fumaça do section */
+    .home-section::after {
+        display: none;
+    }
+}
+
+/* Tablets Portrait (768px - 991px) */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 65px;
+    }
+    
+    .navbar-logo a {
+        height: 65px;
+    }
+    
+    .logo-estatueta {
+        height: 44px;
+    }
+    
+    .logo-slogan {
+        height: 19px;
+    }
+    
+    .logo-icon {
+        height: 44px;
+    }
+    
+    #header.scrolled .navbar-logo {
+        height: 44px;
+    }
+    
+    #header.scrolled .navbar-logo a {
+        height: 44px;
+    }
+    
+    /* Home */
+    .home-section {
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .home-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 75px 0 0 0;
+        gap: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    /* 1. Foto */
+    .home-image {
+        max-width: 550px;
+        width: 82%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-35px);
+    }
+    
+    .home-image img {
+        width: 100%;
+    }
+    
+    .home-image::after {
+        display: none;
+    }
+    
+    /* 2. Container do conteúdo */
+    .home-content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 90px 0 90px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 10;
+        min-height: 58vh;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        gap: 22px;
+    }
+    
+    /* Background da fumaça */
+    .home-content::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        height: 48%;
+        z-index: -1;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título */
+    .home-title {
+        font-size: 27px;
+        margin: 0;
+        order: 2;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+        line-height: 1.4;
+    }
+    
+    /* 4. Botão - LARGURA MAIOR */
+    .home-cta {
+        background-color: #B8860B;
+        order: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .btn-cta {
+        padding: 15px 60px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Remove fumaça do section */
+    .home-section::after {
+        display: none;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 12px 0;
+    }
+    
+    #header.scrolled .navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar-menu {
+        width: 280px;
+        padding: 90px 25px 25px;
+    }
+    
+    .navbar-menu a {
+        font-size: 15px;
+        padding: 16px 0;
+    }
+    
+    /* Home */
+    .home-section {
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .home-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 0 0 0;
+        gap: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    /* 1. Foto */
+    .home-image {
+        max-width: 480px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-30px);
+    }
+    
+    .home-image img {
+        width: 100%;
+    }
+    
+    .home-image::after {
+        display: none;
+    }
+    
+    /* 2. Container do conteúdo */
+    .home-content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 85px 0 85px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 10;
+        min-height: 56vh;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        gap: 20px;
+    }
+    
+    /* Background da fumaça */
+    .home-content::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        height: 46%;
+        z-index: -1;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título */
+    .home-title {
+        font-size: 25px;
+        margin: 0;
+        order: 2;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+        line-height: 1.4;
+    }
+    
+    /* 4. Botão */
+    .home-cta {
+        order: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .btn-cta {
+        padding: 14px 45px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 450px;
+    }
+    
+    .btn-cta i {
+        font-size: 16px;
+    }
+
+    /* Remove fumaça do section */
+    .home-section::after {
+        display: none;
+    }
+}
+
+/* Mobile Medium (480px - 575px) */
+@media (max-width: 575px) {
+    .navbar-logo {
+        height: 60px;
+    }
+    
+    .navbar-logo a {
+        height: 60px;
+    }
+    
+    .logo-estatueta {
+        height: 40px;
+    }
+    
+    .logo-slogan {
+        height: 17px;
+    }
+    
+    .logo-icon {
+        height: 40px;
+    }
+    
+    #header.scrolled .navbar-logo {
+        height: 40px;
+    }
+    
+    #header.scrolled .navbar-logo a {
+        height: 40px;
+    }
+    
+    .navbar-menu {
+        width: 250px;
+        padding: 80px 20px 20px;
+    }
+    
+    .navbar-menu a {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+    
+    /* Home */
+    .home-section {
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .home-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 65px 0 0 0;
+        gap: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    /* 1. Foto */
+    .home-image {
+        max-width: 420px;
+        width: 78%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-25px);
+    }
+    
+    .home-image img {
+        width: 100%;
+    }
+    
+    .home-image::after {
+        display: none;
+    }
+    
+    /* 2. Container do conteúdo */
+    .home-content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 80px 0 80px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 10;
+        min-height: 54vh;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        gap: 18px;
+    }
+    
+    /* Background da fumaça */
+    .home-content::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        height: 44%;
+        z-index: -1;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título */
+    .home-title {
+        font-size: 23px;
+        margin: 0;
+        order: 2;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 0 18px;
+        line-height: 1.45;
+    }
+    
+    /* 4. Botão */
+    .home-cta {
+        order: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 18px;
+    }
+    
+    .btn-cta {
+        padding: 13px 40px;
+        font-size: 13px;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .btn-cta i {
+        font-size: 15px;
+        margin-right: 6px;
+    }
+    
+    .divider-line {
+        height: 3px;
+    }
+
+    /* Remove fumaça do section */
+    .home-section::after {
+        display: none;
+    }
+}
+
+/* Mobile Small (400px - 479px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    /* Home */
+    .home-section {
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .home-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0 0 0;
+        gap: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    /* 1. Foto */
+    .home-image {
+        max-width: 380px;
+        width: 76%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-20px);
+    }
+    
+    .home-image img {
+        width: 100%;
+    }
+    
+    .home-image::after {
+        display: none;
+    }
+    
+    /* 2. Container do conteúdo */
+    .home-content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 75px 0 75px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 10;
+        min-height: 52vh;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        gap: 16px;
+    }
+    
+    /* Background da fumaça */
+    .home-content::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        height: 42%;
+        z-index: -1;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título */
+    .home-title {
+        font-size: 21px;
+        margin: 0;
+        order: 2;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 0 16px;
+        line-height: 1.5;
+    }
+    
+    /* 4. Botão */
+    .home-cta {
+        order: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 16px;
+    }
+    
+    .btn-cta {
+        padding: 12px 35px;
+        font-size: 12px;
+        width: 100%;
+        max-width: 360px;
+    }
+    
+    .btn-cta i {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    /* Remove fumaça do section */
+    .home-section::after {
+        display: none;
+    }
+}
+
+/* Mobile Extra Small (320px - 399px) */
+@media (max-width: 399px) {
+    .navbar-logo {
+        height: 55px;
+    }
+    
+    .navbar-logo a {
+        height: 55px;
+        width: 70px;
+    }
+    
+    .logo-estatueta {
+        height: 36px;
+    }
+    
+    .logo-slogan {
+        height: 15px;
+    }
+    
+    .logo-icon {
+        height: 36px;
+    }
+    
+    #header.scrolled .navbar-logo {
+        height: 36px;
+    }
+    
+    #header.scrolled .navbar-logo a {
+        height: 36px;
+    }
+    
+    .navbar-menu {
+        width: 240px;
+        padding: 70px 18px 18px;
+    }
+    
+    .navbar-menu a {
+        font-size: 13px;
+        padding: 14px 0;
+    }
+    
+    /* Home */
+    .home-section {
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .home-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 55px 0 0 0;
+        gap: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    /* 1. Foto */
+    .home-image {
+        max-width: 340px;
+        width: 74%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-15px);
+    }
+    
+    .home-image img {
+        width: 100%;
+    }
+    
+    .home-image::after {
+        display: none;
+    }
+    
+    /* 2. Container do conteúdo */
+    .home-content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 70px 0 70px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 10;
+        min-height: 50vh;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        gap: 14px;
+    }
+    
+    /* Background da fumaça */
+    .home-content::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        height: 40%;
+        z-index: -1;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título */
+    .home-title {
+        font-size: 19px;
+        margin: 0;
+        order: 2;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 0 14px;
+        line-height: 1.5;
+    }
+    
+    /* 4. Botão */
+    .home-cta {
+        order: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 14px;
+    }
+    
+    .btn-cta {
+        padding: 11px 30px;
+        font-size: 11px;
+        width: 100%;
+        max-width: 320px;
+        letter-spacing: 0.3px;
+    }
+    
+    .btn-cta i {
+        font-size: 13px;
+        margin-right: 5px;
+    }
+
+    /* Remove fumaça do section */
+    .home-section::after {
+        display: none;
+    }
+}
+
+/* Mobile Small (368px - 399px) */
+@media (min-width: 368px) and (max-width: 399px) {
+    /* Home */
+    .home-section {
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .home-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 58px 0 0 0;
+        gap: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    /* 1. Foto - COLADA NO BOTÃO */
+    .home-image {
+        max-width: 350px;
+        width: 75%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-10px);
+    }
+    
+    .home-image img {
+        width: 100%;
+    }
+    
+    .home-image::after {
+        display: none;
+    }
+    
+    /* 2. Container do conteúdo */
+    .home-content {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 68px 0 68px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 10;
+        min-height: 51vh;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        gap: 15px;
+    }
+    
+    /* Background da fumaça */
+    .home-content::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        height: 60%;
+        z-index: -1;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título */
+    .home-title {
+        font-size: 20px;
+        margin: 0;
+        order: 2;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+    
+    /* 4. Botão */
+    .home-cta {
+        order: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .btn-cta {
+        padding: 11px 32px;
+        font-size: 11px;
+        width: 100%;
+        max-width: 330px;
+        letter-spacing: 0.3px;
+    }
+    
+    .btn-cta i {
+        font-size: 13px;
+        margin-right: 5px;
+    }
+
+    /* Remove fumaça do section */
+    .home-section::after {
+        display: none;
+    }
+}
+
+/* Mobile Tiny (até 320px) */
+@media (max-width: 320px) {
+    /* Home */
+    .home-content-wrapper {
+        padding: 50px 0 0 0;
+    }
+    
+    /* 1. Foto */
+    .home-image {
+        max-width: 300px;
+        width: 72%;
+        transform: translateY(-10px);
+    }
+    
+    /* 2. Container do conteúdo */
+    .home-content {
+        padding: 65px 0 65px 0;
+        min-height: 48vh;
+    }
+
+    .content-box {
+        gap: 12px;
+    }
+    
+    /* Background da fumaça */
+    .home-content::before {
+        height: 38%;
+        background: linear-gradient(
+            to top,
+            rgba(140, 105, 35, 1) 0%,
+            rgba(135, 101, 33, 1) 6%,
+            rgba(130, 97, 32, 1) 12%,
+            rgba(125, 93, 31, 1) 18%,
+            rgba(120, 90, 30, 1) 24%,
+            rgba(115, 86, 29, 1) 30%,
+            rgba(110, 82, 28, 1) 36%,
+            rgba(105, 78, 26, 0.98) 42%,
+            rgba(100, 75, 25, 0.94) 48%,
+            rgba(90, 68, 22, 0.88) 54%,
+            rgba(80, 60, 20, 0.78) 60%,
+            rgba(70, 52, 18, 0.65) 66%,
+            rgba(60, 45, 15, 0.50) 72%,
+            rgba(50, 38, 13, 0.35) 78%,
+            rgba(40, 30, 10, 0.22) 84%,
+            rgba(30, 22, 8, 0.12) 90%,
+            transparent 100%
+        );
+    }
+    
+    /* 3. Título */
+    .home-title {
+        font-size: 17px;
+        padding: 0 12px;
+        line-height: 1.55;
+    }
+    
+    /* 4. Botão */
+    .home-cta {
+        padding: 0 12px;
+    }
+    
+    .btn-cta {
+        padding: 10px 25px;
+        font-size: 10px;
+        max-width: 280px;
+    }
+    
+    .btn-cta i {
+        font-size: 12px;
+        margin-right: 4px;
+    }
 }
 
 /* ===================================
@@ -1016,8 +2308,11 @@ a:hover {
     
     .area-card-text {
         font-size: 12px;
+        text-align: center;
     }
 }
+
+
 
 /* ===================================
    WOW.js - ANIMAÇÕES AO SCROLL
@@ -1096,7 +2391,7 @@ a:hover {
     
     .area-card-text {
         font-size: 14px;
-        text-align: left;
+        text-align: center;
         line-height: 1.65;
     }
 }
@@ -1302,125 +2597,6 @@ a:hover {
 }
 
 /* ===================================
-   SEÇÃO SOBRE
-   =================================== */
-.sobre-section {
-    position: relative;
-    width: 100%;
-    min-height: 600px;
-    display: flex;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%);
-    padding: 80px 0;
-}
-
-/* Container Principal */
-.sobre-section .container {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-/* Área de Conteúdo à Esquerda */
-.sobre-content {
-    flex: 1;
-    max-width: 600px;
-    padding: 0;
-}
-
-/* Container da Imagem à Direita */
-.sobre-image-wrapper {
-    flex: 0 0 auto;
-    padding-right: 60px;
-    padding-top: 0;
-}
-
-.sobre-image-container {
-    position: relative;
-    width: 480px;
-    height: 585px;
-    
-    /* Moldura Elegante */
-    padding: 15px;
-    background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 50%, #1a1a1a 100%);
-    border: 2px solid #4a4a4a;
-    box-shadow: 
-        0 10px 40px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
-    
-    /* Cantos levemente arredondados */
-    border-radius: 4px;
-}
-
-/* Moldura Interna Dourada Sutil */
-.sobre-image-container::before {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border: 1px solid rgba(184, 134, 11, 0.3);
-    pointer-events: none;
-    border-radius: 2px;
-}
-
-/* Imagem */
-.sobre-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.95) contrast(1.05);
-}
-
-/* Título da Seção Sobre */
-.sobre-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    font-weight: 700;
-    color: #FFD700;
-    margin-bottom: 25px;
-    text-align: left;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
-}
-
-/* Texto da Seção Sobre */
-.sobre-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 1.65;
-    text-align: justify;
-    margin-bottom: 14px;
-}
-
-.sobre-text:last-of-type {
-    margin-bottom: 30px;
-}
-
-/* Container da Assinatura */
-.sobre-assinatura {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 20px;
-    padding-left: 0;
-}
-
-.sobre-assinatura img {
-    width: 200px;
-    height: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-}
-
-/* ===================================
    RESPONSIVIDADE SEÇÃO SOBRE
    =================================== */
 
@@ -1458,40 +2634,82 @@ a:hover {
         padding: 60px 0;
     }
     
+    /* Container em coluna */
     .sobre-section .container {
-        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
     
+    /* Wrapper da imagem no topo */
     .sobre-image-wrapper {
-        padding-right: 30px;
+        padding-right: 0;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
+    /* Imagem */
     .sobre-image-container {
-        width: 360px;
-        height: 439px;
+        width: 380px;
+        height: 463px;
         padding: 12px;
     }
     
-    .sobre-content {
-        max-width: 500px;
+    /* OAB abaixo da foto */
+    .sobre-oab {
+        font-size: 14px;
+        margin-top: 15px;
+        text-align: center;
     }
     
-    .sobre-title {
-        font-size: 32px;
-    }
-
-    .sobre-text {
+    /* Botão WhatsApp abaixo da OAB */
+    .btn-whatsapp {
+        margin: 15px auto 0 auto;
+        padding: 13px 28px;
         font-size: 14px;
-        line-height: 1.6;
     }
-
+    
+    .btn-whatsapp i {
+        font-size: 20px;
+    }
+    
+    /* Conteúdo abaixo */
+    .sobre-content {
+        order: 2;
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    /* Título centralizado */
+    .sobre-title {
+        font-size: 34px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    /* Texto aumentado e centralizado */
+    .sobre-text {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    
+    .sobre-text:last-of-type {
+        margin-bottom: 30px;
+    }
+    
+    /* Assinatura centralizada */
+    .sobre-assinatura {
+        justify-content: center;
+        margin-top: 25px;
+    }
+    
     .sobre-assinatura img {
-        width: 180px;
-    }
-
-    .sobre-oab {
-        font-size: 13px;
-        margin-top: 12px;
+        width: 200px;
     }
 }
 
@@ -1501,92 +2719,252 @@ a:hover {
         padding: 50px 0;
     }
     
+    /* Container em coluna */
     .sobre-section .container {
         flex-direction: column;
-        gap: 40px;
+        align-items: center;
+        gap: 35px;
+    }
+    
+    /* Wrapper da imagem no topo */
+    .sobre-image-wrapper {
+        padding-right: 0;
+        order: 1;
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
     
-    .sobre-image-wrapper {
-        padding-right: 0;
-        order: -1;
-    }
-    
+    /* Imagem */
     .sobre-image-container {
-        width: 300px;
-        height: 366px;
+        width: 340px;
+        height: 414px;
+        padding: 12px;
         margin: 0 auto;
     }
     
+    /* OAB abaixo da foto */
+    .sobre-oab {
+        font-size: 13px;
+        margin-top: 14px;
+        text-align: center;
+    }
+    
+    /* Botão WhatsApp abaixo da OAB */
+    .btn-whatsapp {
+        margin: 14px auto 0 auto;
+        padding: 12px 26px;
+        font-size: 13px;
+    }
+    
+    .btn-whatsapp i {
+        font-size: 19px;
+    }
+    
+    /* Conteúdo abaixo */
     .sobre-content {
+        order: 2;
         max-width: 100%;
         padding: 0 20px;
         text-align: center;
     }
     
+    /* Título centralizado */
     .sobre-title {
         font-size: 30px;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
     }
-
+    
+    /* Texto aumentado e centralizado */
     .sobre-text {
         font-size: 14px;
+        line-height: 1.65;
         text-align: center;
-        line-height: 1.6;
+        margin-bottom: 15px;
     }
-
+    
+    .sobre-text:last-of-type {
+        margin-bottom: 28px;
+    }
+    
+    /* Assinatura centralizada */
     .sobre-assinatura {
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 22px;
     }
-
+    
     .sobre-assinatura img {
-        width: 160px;
-    }
-
-    .sobre-oab {
-        font-size: 13px;
+        width: 180px;
     }
 }
 
 @media (max-width: 575px) {
     .sobre-section {
-        padding: 40px 0;
+        padding: 35px 0;
     }
     
+    /* Container em coluna */
+    .sobre-section .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+    
+    /* Wrapper da imagem no topo */
+    .sobre-image-wrapper {
+        padding-right: 0;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Imagem menor */
+    .sobre-image-container {
+        width: 280px;
+        height: 341px;
+        padding: 10px;
+    }
+    
+    /* OAB abaixo da foto */
+    .sobre-oab {
+        font-size: 12px;
+        margin-top: 12px;
+        text-align: center;
+    }
+    
+    /* Botão WhatsApp */
+    .btn-whatsapp {
+        margin: 12px auto 0 auto;
+        padding: 11px 24px;
+        font-size: 12px;
+    }
+    
+    .btn-whatsapp i {
+        font-size: 18px;
+    }
+    
+    /* Conteúdo abaixo */
+    .sobre-content {
+        order: 2;
+        max-width: 100%;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    /* Título centralizado */
+    .sobre-title {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    
+    /* Texto centralizado */
+    .sobre-text {
+        font-size: 13px;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    
+    .sobre-text:last-of-type {
+        margin-bottom: 22px;
+    }
+    
+    /* Assinatura centralizada */
+    .sobre-assinatura {
+        justify-content: center;
+        margin-top: 18px;
+    }
+    
+    .sobre-assinatura img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-section {
+        padding: 32px 0;
+    }
+    
+    /* Container em coluna */
+    .sobre-section .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    /* Wrapper da imagem no topo */
+    .sobre-image-wrapper {
+        padding-right: 0;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Imagem menor */
     .sobre-image-container {
         width: 260px;
         height: 317px;
         padding: 10px;
     }
     
-    .sobre-content {
-        padding: 0 15px;
+    /* OAB abaixo da foto */
+    .sobre-oab {
+        font-size: 11px;
+        margin-top: 11px;
+        text-align: center;
     }
     
+    /* Botão WhatsApp */
+    .btn-whatsapp {
+        margin: 11px auto 0 auto;
+        padding: 10px 22px;
+        font-size: 11px;
+    }
+    
+    .btn-whatsapp i {
+        font-size: 17px;
+    }
+    
+    /* Conteúdo abaixo */
+    .sobre-content {
+        order: 2;
+        max-width: 100%;
+        padding: 0 12px;
+        text-align: center;
+    }
+    
+    /* Título centralizado */
     .sobre-title {
-        font-size: 26px;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 16px;
     }
-
+    
+    /* Texto centralizado */
     .sobre-text {
-        font-size: 13px;
-        text-align: left;
-        line-height: 1.65;
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 11px;
     }
-
+    
+    .sobre-text:last-of-type {
+        margin-bottom: 20px;
+    }
+    
+    /* Assinatura centralizada */
     .sobre-assinatura {
-        justify-content: flex-start;
+        justify-content: center;
+        margin-top: 16px;
     }
-
+    
     .sobre-assinatura img {
         width: 140px;
     }
-
-    .sobre-oab {
-        font-size: 12px;
-        margin-top: 10px;
-    }   
 }
 
 /* ===================================
@@ -1840,86 +3218,375 @@ a:hover {
    =================================== */
 
 @media (max-width: 991px) {
+    .depoimentos-section {
+        min-height: 100vh;
+        align-items: center;
+        padding: 60px 0 0 0;
+    }
+    
+    /* Grid vira coluna */
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+        align-items: center;
+    }
+    
+    /* Carrossel fica em cima */
+    .depoimentos-right {
+        order: 1;
+        padding: 40px 30px 40px 30px;
+        justify-content: center;
+    }
+    
+    /* Imagem fica embaixo - COLADA NA BASE */
+    .depoimentos-left {
+        order: 2;
+        padding: 0;
+        align-items: flex-end;
+        align-self: flex-end;
+    }
+    
+    .depoimentos-image {
+        max-width: 420px;
+        width: 100%;
+    }
+    
+    .depoimentos-image img {
+        max-height: 500px;
+    }
+    
+    /* Carrossel maior */
     .testimonials-carousel {
-        max-width: 500px;
+        max-width: 600px;
     }
     
+    /* Wrapper com mais altura */
     .testimonials-wrapper {
-        height: 180px;
+        height: 240px;
     }
     
+    /* Cards com espaçamento maior */
     .testimonial-card {
-        gap: 20px;
+        gap: 22px;
+        max-width: 560px;
     }
     
     .testimonial-card.prev {
-        transform: scale(0.7) translateY(-90px);
+        transform: scale(0.65) translateY(-140px);
+        opacity: 0.25;
     }
     
     .testimonial-card.next {
-        transform: scale(0.7) translateY(90px);
+        transform: scale(0.65) translateY(140px);
+        opacity: 0.25;
     }
     
+    /* Avatar */
+    .testimonial-avatar {
+        width: 85px;
+        height: 85px;
+    }
+    
+    /* Nome */
+    .testimonial-name {
+        font-size: 25px;
+    }
+    
+    /* Texto */
+    .testimonial-text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    /* Botões */
+    .carousel-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .depoimentos-section {
+        min-height: 100vh;
+        align-items: center;
+        padding: 50px 0 0 0;
+    }
+    
+    /* Grid em coluna */
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+        align-items: center;
+    }
+    
+    /* Carrossel em cima */
+    .depoimentos-right {
+        order: 1;
+        padding: 35px 25px 35px 25px;
+        justify-content: center;
+    }
+    
+    /* Imagem embaixo - COLADA NA BASE */
+    .depoimentos-left {
+        order: 2;
+        padding: 0;
+        align-items: flex-end;
+        align-self: flex-end;
+    }
+    
+    .depoimentos-image {
+        max-width: 380px;
+        width: 100%;
+    }
+    
+    .depoimentos-image img {
+        max-height: 450px;
+    }
+    
+    /* Carrossel */
+    .testimonials-carousel {
+        max-width: 550px;
+    }
+    
+    /* Wrapper */
+    .testimonials-wrapper {
+        height: 220px;
+    }
+    
+    /* Cards */
+    .testimonial-card {
+        gap: 20px;
+        max-width: 520px;
+    }
+    
+    .testimonial-card.prev {
+        transform: scale(0.6) translateY(-130px);
+        opacity: 0.22;
+    }
+    
+    .testimonial-card.next {
+        transform: scale(0.6) translateY(130px);
+        opacity: 0.22;
+    }
+    
+    /* Avatar */
     .testimonial-avatar {
         width: 80px;
         height: 80px;
     }
     
+    /* Nome */
     .testimonial-name {
         font-size: 24px;
     }
     
+    /* Texto */
     .testimonial-text {
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    /* Botões */
+    .carousel-nav {
+        width: 48px;
+        height: 48px;
+        font-size: 26px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
+    .depoimentos-section {
+        min-height: 100vh;
+        align-items: center;
+        padding: 45px 0 0 0;
+    }
+    
+    /* Grid em coluna */
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+        align-items: center;
+    }
+    
+    /* Carrossel em cima */
+    .depoimentos-right {
+        order: 1;
+        padding: 30px 20px 30px 20px;
+        justify-content: center;
+    }
+    
+    /* Imagem embaixo - COLADA NA BASE */
+    .depoimentos-left {
+        order: 2;
+        padding: 0;
+        align-items: flex-end;
+        align-self: flex-end;
+    }
+    
+    .depoimentos-image {
+        max-width: 340px;
+        width: 95%;
+    }
+    
+    .depoimentos-image img {
+        max-height: 400px;
+    }
+    
+    /* Carrossel */
     .testimonials-carousel {
         max-width: 100%;
     }
     
+    /* Wrapper */
     .testimonials-wrapper {
-        height: 220px;
+        height: 200px;
     }
     
+    /* Cards */
     .testimonial-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+        gap: 18px;
+        max-width: 100%;
+        padding: 0 10px;
     }
     
+    .testimonial-card.prev {
+        transform: scale(0.55) translateY(-120px);
+        opacity: 0.2;
+    }
+    
+    .testimonial-card.next {
+        transform: scale(0.55) translateY(120px);
+        opacity: 0.2;
+    }
+    
+    /* Avatar */
     .testimonial-avatar {
         width: 75px;
         height: 75px;
     }
     
+    /* Nome */
     .testimonial-name {
         font-size: 22px;
     }
     
+    /* Texto */
     .testimonial-text {
-        font-size: 14px;
-        line-height: 1.5;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    
+    /* Botões */
+    .carousel-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 480px) {
+    .depoimentos-section {
+        min-height: 100vh;
+        align-items: center;
+        padding: 40px 0 0 0;
+    }
+    
+    /* Section header */
+    .depoimentos-section .section-header {
+        margin: 0 auto 35px;
+        padding: 0 15px;
+    }
+    
+    .depoimentos-section .section-title {
+        font-size: 28px;
+    }
+    
+    /* Grid em coluna */
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+        align-items: center;
+    }
+    
+    /* Carrossel em cima */
+    .depoimentos-right {
+        order: 1;
+        padding: 25px 15px 25px 15px;
+        justify-content: center;
+    }
+    
+    /* Imagem embaixo - COLADA NA BASE */
+    .depoimentos-left {
+        order: 2;
+        padding: 0;
+        align-items: flex-end;
+        align-self: flex-end;
+    }
+    
+    .depoimentos-image {
+        max-width: 300px;
+        width: 90%;
+    }
+    
+    .depoimentos-image img {
+        max-height: 360px;
+    }
+    
+    /* Carrossel */
+    .testimonials-carousel {
+        max-width: 100%;
+    }
+    
+    /* Wrapper */
     .testimonials-wrapper {
-        height: 240px;
+        height: 185px;
     }
     
+    /* Cards */
+    .testimonial-card {
+        gap: 16px;
+        max-width: 100%;
+        padding: 0 8px;
+    }
+    
+    .testimonial-card.prev {
+        transform: scale(0.5) translateY(-110px);
+        opacity: 0.18;
+    }
+    
+    .testimonial-card.next {
+        transform: scale(0.5) translateY(110px);
+        opacity: 0.18;
+    }
+    
+    /* Avatar */
     .testimonial-avatar {
-        width: 65px;
-        height: 65px;
+        width: 70px;
+        height: 70px;
+        border-width: 2px;
     }
     
+    /* Nome */
     .testimonial-name {
         font-size: 20px;
     }
     
+    /* Texto */
     .testimonial-text {
-        font-size: 13px;
+        font-size: 11px;
+        line-height: 1.45;
+    }
+    
+    /* Botões */
+    .carousel-nav {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
     }
 }
 
@@ -2204,8 +3871,17 @@ a:hover {
         font-size: 30px;
     }
     
+    /* Grid vira coluna */
     .contato-grid {
-        gap: 35px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    /* Formulário centralizado */
+    .contato-form-wrapper {
+        order: 1;
+        max-width: 100%;
     }
     
     .contato-form {
@@ -2226,25 +3902,62 @@ a:hover {
         padding: 12px 30px;
         font-size: 14px;
         margin-top: 6px;
+        align-self: center;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    /* Card de informações abaixo */
+    .contato-info-wrapper {
+        order: 2;
     }
     
     .contato-info-card {
-        padding: 22px 18px;
-        gap: 16px;
+        padding: 25px 20px;
+        gap: 18px;
+        text-align: center;
+    }
+    
+    /* Itens centralizados */
+    .info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
     }
     
     .info-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 17px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .info-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .info-label {
         font-size: 14px;
+        text-align: center;
     }
     
     .info-text {
         font-size: 12px;
+        text-align: center;
+    }
+    
+    /* Redes sociais centralizadas */
+    .info-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
     }
     
     .social-link {
@@ -2566,37 +4279,94 @@ a:hover {
         padding: 40px 0 0 0;
     }
     
+    /* Grid em coluna */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 35px;
     }
     
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
+    /* Colunas centralizadas */
+    .footer-column {
+        align-items: center;
         text-align: center;
-        padding: 20px 0;
+    }
+    
+    /* Logo centralizada */
+    .footer-logo {
+        margin-bottom: 18px;
     }
     
     .footer-logo img {
         width: 110px;
     }
     
+    /* Descrição centralizada */
+    .footer-description {
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    /* OAB centralizado */
+    .footer-oab {
+        align-self: center;
+    }
+    
+    /* Títulos centralizados */
     .footer-title {
         font-size: 18px;
         margin-bottom: 15px;
+        text-align: center;
     }
     
-    .footer-description {
-        font-size: 13px;
-    }
-    
+    /* Links centralizados */
     .footer-links {
         gap: 10px;
+        align-items: center;
     }
     
+    .footer-links li a {
+        justify-content: center;
+    }
+    
+    /* Contatos centralizados - ÍCONES ALINHADOS */
     .footer-contact {
         gap: 12px;
+        align-items: center;
+    }
+    
+    .footer-contact li {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        gap: 12px;
+    }
+    
+    .footer-contact li i {
+        margin-top: 0;
+        align-self: flex-start;
+    }
+    
+    .footer-contact li span {
+        text-align: left;
+    }
+    
+    /* Redes sociais centralizadas */
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-social-icons {
+        justify-content: center;
+    }
+    
+    /* Footer bottom */
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 20px 0;
     }
 }
 
@@ -2605,12 +4375,264 @@ a:hover {
         padding: 35px 0 0 0;
     }
     
+    /* Grid em coluna */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    /* Colunas centralizadas */
+    .footer-column {
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Logo */
+    .footer-logo {
+        margin-bottom: 16px;
+    }
+    
     .footer-logo img {
         width: 100px;
+    }
+    
+    /* Descrição */
+    .footer-description {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    
+    /* OAB */
+    .footer-oab {
+        align-self: center;
+        padding: 9px 16px;
+    }
+    
+    .footer-oab i {
+        font-size: 16px;
+    }
+    
+    .footer-oab span {
+        font-size: 13px;
+    }
+    
+    /* Títulos */
+    .footer-title {
+        font-size: 17px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+    
+    /* Links */
+    .footer-links {
+        gap: 9px;
+        align-items: center;
+    }
+    
+    .footer-links li a {
+        font-size: 13px;
+        justify-content: center;
+    }
+    
+    /* Contatos - ÍCONES ALINHADOS */
+    .footer-contact {
+        gap: 11px;
+        align-items: center;
+    }
+    
+    .footer-contact li {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        gap: 10px;
+    }
+    
+    .footer-contact li i {
+        font-size: 15px;
+        margin-top: 0;
+        align-self: flex-start;
+    }
+    
+    .footer-contact li span {
+        font-size: 12px;
+        text-align: left;
+    }
+    
+    /* Redes sociais */
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-social-title {
+        font-size: 13px;
+    }
+    
+    .footer-social-icons {
+        justify-content: center;
+        gap: 9px;
+    }
+    
+    .footer-social-link {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    /* Divider */
+    .footer-divider {
+        margin: 25px 0;
+    }
+    
+    /* Footer bottom */
+    .footer-bottom {
+        flex-direction: column;
+        gap: 9px;
+        text-align: center;
+        padding: 18px 0;
     }
     
     .footer-copyright,
     .footer-dev {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 0 0 0;
+    }
+    
+    /* Grid em coluna */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 0 12px;
+    }
+    
+    /* Colunas centralizadas */
+    .footer-column {
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Logo */
+    .footer-logo {
+        margin-bottom: 14px;
+    }
+    
+    .footer-logo img {
+        width: 90px;
+    }
+    
+    /* Descrição */
+    .footer-description {
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+    
+    /* OAB */
+    .footer-oab {
+        align-self: center;
+        padding: 8px 14px;
+        gap: 8px;
+    }
+    
+    .footer-oab i {
+        font-size: 15px;
+    }
+    
+    .footer-oab span {
+        font-size: 12px;
+    }
+    
+    /* Títulos */
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    
+    /* Links */
+    .footer-links {
+        gap: 8px;
+        align-items: center;
+    }
+    
+    .footer-links li a {
+        font-size: 12px;
+        justify-content: center;
+    }
+    
+    /* Contatos - ÍCONES ALINHADOS */
+    .footer-contact {
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-contact li {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        gap: 9px;
+    }
+    
+    .footer-contact li i {
+        font-size: 14px;
+        margin-top: 0;
+        align-self: flex-start;
+    }
+    
+    .footer-contact li span {
+        font-size: 11px;
+        text-align: left;
+    }
+    
+    /* Redes sociais */
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8px;
+    }
+    
+    .footer-social-title {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-social-icons {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .footer-social-link {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+    
+    /* Divider */
+    .footer-divider {
+        margin: 22px 0;
+    }
+    
+    /* Footer bottom */
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 16px 0;
+    }
+    
+    .footer-copyright,
+    .footer-dev {
+        font-size: 11px;
     }
 }
